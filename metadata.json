@@ -1,0 +1,5 @@
+{
+  "name": "JobQ Platform Prototype",
+  "description": "Interactive prototype including USSD Simulator, Job Seeker Web App, Employer Portal, and System Architecture Plan.",
+  "requestFramePermissions": []
+}

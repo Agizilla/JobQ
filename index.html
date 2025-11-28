@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JobQ Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              jobq: {
+                red: '#FF0000',
+                green: '#00FF00',
+                blue: '#0000FF',
+                yellow: '#FFFF00',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              retro: ['VT323', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for retro feel */
+      .retro-scroll::-webkit-scrollbar {
+        width: 8px;
+      }
+      .retro-scroll::-webkit-scrollbar-track {
+        background: #9ca3af;
+      }
+      .retro-scroll::-webkit-scrollbar-thumb {
+        background: #374151;
+      }
+
+      /* Printing Styles for Investor Deck */
+      @media print {
+        @page {
+          size: landscape;
+          margin: 0;
+        }
+        body {
+          margin: 0;
+          -webkit-print-color-adjust: exact;
+        }
+        .print-page {
+          height: 100vh;
+          width: 100vw;
+          page-break-after: always;
+          break-after: page;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 text-gray-900 h-screen w-screen overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>
